@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
   </head>
-  <body>
+  <body onload="init();">
     <header class="header">
       <div class="header-left">
         <h1 class="logo-headline">Schliwka's Lieferhütte</h1>
@@ -259,7 +259,7 @@
       <aside class="main-right">
         <div class="flex basket-content-wrapper">
           <h2 class="heading-basket">Warenkorb</h2>
-          <div id="empty-basket" class="d-none">
+          <div id="empty-basket">
             <img src="./img/shopping-basket.png" alt="Warenkorb Symbol" class="basket-image">
             <p class="basket-text">
               Derzeit ist der Warenkorb leer. <br />
@@ -268,28 +268,12 @@
             </p>
           </div>
           <div id="basket-content">
-            <div class="basket-item">
-              <div class="basket-left">
-                <div class="amount">1</div>
-                <div class="title">Pizza</div>
-              </div>
-              <div class="basket-right">
-                <div class="price">10.99</div>
-              </div>
-            </div>
-            <div class="basket-item">
-              <div class="basket-left">
-                <div class="amount">1</div>
-                <div class="title">Pizza</div>
-              </div>
-              <div class="basket-right">
-                <div class="price">10.99</div>
-                <div class="items-btn">
-                  <span>-</span>
-                  <span>+</span>
-                </div>
-              </div>
-            </div>
+            
+
+          </div>
+          <div id="basket-sum">
+            <div class="basket-left">SUMME:</div>
+            <div class="basket-right" id="sum-text"></div>
           </div>
         </div>
       </aside>

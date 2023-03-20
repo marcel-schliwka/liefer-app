@@ -177,6 +177,16 @@ body {
   gap: 1em;
 }
 
+#basket-sum {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.basket-item span {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
 /* Footer */
 .footer {
   background-color: lightgrey;
