@@ -60,7 +60,8 @@ body {
 
 .main-right {
   height: 100%;
-  width: 30%;
+  max-width: 30%;
+  min-width: 10em;
   background-color: antiquewhite;
 }
 
@@ -106,7 +107,7 @@ body {
 
 .food-title {
   font-size: 1.1rem;
-  line-height: 0;
+
   font-weight: bold;
 }
 
@@ -149,6 +150,7 @@ body {
   flex-direction: column;
   position: fixed;
   align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 1em 1em;
 }
@@ -180,6 +182,25 @@ body {
 #basket-sum {
   font-size: 1.25rem;
   font-weight: bold;
+}
+
+#buy-now {
+  background-color: #f36805;
+  color: white;
+  padding: 10px 40px;
+  border-style: none;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 2em;
+  font-weight: normal;
+  transition: transform 125ms ease-in-out;
+}
+
+#buy-now:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: transform 125ms ease-in-out;
 }
 
 .basket-item span {
