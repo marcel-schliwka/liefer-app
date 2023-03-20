@@ -221,3 +221,12 @@ body {
 .footer a:hover {
   text-decoration: underline;
 }
+
+/* Order Completed Modal */
+#order-completed-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}

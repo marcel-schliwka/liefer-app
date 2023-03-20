@@ -22,7 +22,10 @@
     </header>
 
     <main class="main">
-      <section class="main-left">
+      <section id="order-completed-wrapper" class="d-none">
+        <h1>Vielen Dank für Ihre Bestellung!</h1>
+      </section>
+      <section class="main-left" id="main-left">
         <img
           src="./img/lieferando_header.png"
           alt="Main Image"
@@ -256,7 +259,7 @@
           </div>
         </div>
       </section>
-      <aside class="main-right">
+      <aside class="main-right" id="main-right">
         <div class="flex basket-content-wrapper">
           <h2 class="heading-basket">Warenkorb</h2>
           <div id="empty-basket">
@@ -274,7 +277,7 @@
           <div id="basket-sum">
             <div class="basket-left">SUMME:</div>
             <div class="basket-right" id="sum-text"></div>
-            <button id="buy-now">Bezahlen</button>
+            <button id="buy-now">Bezahlen <span id="buy-button-price"></span></button>
           </div>
         </div>
       </aside>

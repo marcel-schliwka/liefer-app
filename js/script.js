@@ -6,6 +6,10 @@ let emptyBasket = document.getElementById("empty-basket");
 let basketContent = document.getElementById("basket-content");
 let basketSum = document.getElementById("basket-sum");
 let sumText = document.getElementById("sum-text");
+let buyButtonPrice = document.getElementById("buy-button-price");
+let mainLeft = document.getElementById("main-left");
+let mainRight = document.getElementById("main-right");
+let orderCompletedWrapper = document.getElementById("order-completed-wrapper");
 
 function init() {
   checkEmptyBasket();
@@ -111,4 +115,12 @@ function addSumToDOM() {
   let sum = convertToGermanFloat(calculateSum(prices));
   sumText.innerText = "";
   sumText.innerText = `${sum} €`;
+  buyButtonPrice.innerText = "";
+  buyButtonPrice.innerText = `(${sum} €)`;
+}
+
+function orderCompleted() {
+  orderCompletedWrapper.classList.toggle("d-none");
+  mainRight.classList.toggle("d-none");
+  mainLeft.classList.toggle("d-none");
 }
