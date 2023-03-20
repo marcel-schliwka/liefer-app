@@ -43,6 +43,10 @@ body {
   width: 80%;
 }
 
+.d-none {
+  display: none !important;
+}
+
 .main-left-content-wrapper {
   height: 100%;
   padding: 2em;
@@ -154,6 +158,23 @@ body {
   opacity: 0.75;
   object-fit: cover;
   width: 50%;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+.items-btn {
+  display: flex;
+  gap: 20px;
+}
+
+.basket-left {
+  display: flex;
+  gap: 1em;
 }
 
 /* Footer */
