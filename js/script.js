@@ -7,12 +7,21 @@ let basketContent = document.getElementById("basket-content");
 let basketSum = document.getElementById("basket-sum");
 let sumText = document.getElementById("sum-text");
 let buyButtonPrice = document.getElementById("buy-button-price");
+let basketMobileBtnPrice = document.getElementById("basket-mobile-btn-price");
 let mainLeft = document.getElementById("main-left");
 let mainRight = document.getElementById("main-right");
 let orderCompletedWrapper = document.getElementById("order-completed-wrapper");
+let basketMobileBtn = document.getElementById("basket-mobile-btn");
+let mainWrapper = document.querySelector("main");
+let footer = document.querySelector("footer");
+
+window.addEventListener("resize", function () {
+  checkScreenWidth();
+});
 
 function init() {
   checkEmptyBasket();
+  checkScreenWidth();
 }
 
 function checkEmptyBasket() {
@@ -117,10 +126,60 @@ function addSumToDOM() {
   sumText.innerText = `${sum} €`;
   buyButtonPrice.innerText = "";
   buyButtonPrice.innerText = `(${sum} €)`;
+  basketMobileBtnPrice.innerText = "";
+  basketMobileBtnPrice.innerText = `(${sum} €)`;
 }
 
 function orderCompleted() {
-  orderCompletedWrapper.classList.toggle("d-none");
-  mainRight.classList.toggle("d-none");
-  mainLeft.classList.toggle("d-none");
+  orderCompletedWrapper.classList.remove("d-none");
+  mainRight.classList.add("d-none");
+  mainLeft.classList.add("d-none");
+}
+
+function showBasketMobile() {
+  basketMobileBtn.innerText = "Warenkorb schließen";
+  basketMobileBtn.setAttribute("onclick", "hideMobileBasket();");
+  mainLeft.classList.add("d-none");
+  mainRight.style.display = "flex";
+  mainRight.style.width = "90%";
+  mainWrapper.style.justifyContent = "center";
+  footer.classList.add("d-none");
+}
+
+function hideMobileBasket() {
+  basketMobileBtn.innerText = "Warenkorb";
+  basketMobileBtn.setAttribute("onclick", "showBasketMobile();");
+  mainLeft.classList.remove("d-none");
+  mainRight.style.display = "";
+  mainRight.style.width = "30%";
+  mainWrapper.style.justifyContent = "";
+  footer.classList.remove("d-none");
+}
+
+function checkScreenWidth() {
+  let width = window.innerWidth;
+  if (width < 635) {
+    document
+      .getElementById("pizza-container")
+      .setAttribute("onclick", "addItem('Pizza en la roma (Ø 26cm)', 7.50)");
+    document
+      .getElementById("pasta-container")
+      .setAttribute("onclick", "addItem('Pasta alla Marcel', 9.00)");
+    document
+      .getElementById("salad-container")
+      .setAttribute("onclick", "addItem('Türkischer Salat', 10.75)");
+    document
+      .getElementById("vine-container")
+      .setAttribute("onclick", "addItem('Weinblätter (8 Stück)', 5.00)");
+    document
+      .getElementById("mai-thai-container")
+      .setAttribute("onclick", "addItem('Mai Thai Box', 10.75)");
+  }
+  if (width > 635) {
+    document.getElementById("pizza-container").removeAttribute("onclick");
+    document.getElementById("pasta-container").removeAttribute("onclick");
+    document.getElementById("salad-container").removeAttribute("onclick");
+    document.getElementById("vine-container").removeAttribute("onclick");
+    document.getElementById("mai-thai-container").removeAttribute("onclick");
+  }
 }

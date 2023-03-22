@@ -13,9 +13,7 @@
       <div class="header-left">
         <h1 class="logo-headline">Schliwka's Lieferhütte</h1>
       </div>
-      <div class="header-center">
-        <h2 class="header-site-title">Speisekarte</h2>
-      </div>
+
       <div class="header-right">
         
       </div>
@@ -107,7 +105,7 @@
           <div class="meals-wrapper">
             <h2 class="restaurant-name">Speisekarte</h2>
 
-            <div class="meal-container">
+            <div class="meal-container" id="pizza-container">
               <div class="meal-left flex">
                 <div class="meal-left-top">
                   <p class="food-title">Pizza en la roma (Ø 26cm)</p>
@@ -137,7 +135,7 @@
               </div>
             </div>
 
-            <div class="meal-container">
+            <div class="meal-container" id="pasta-container">
               <div class="meal-left flex">
                 <div class="meal-left-top">
                   <p class="food-title">Pasta alla Marcel </p>
@@ -168,7 +166,7 @@
               </div>
             </div>
 
-            <div class="meal-container">
+            <div class="meal-container" id="salad-container">
               <div class="meal-left flex">
                 <div class="meal-left-top">
                   <p class="food-title">Türkischer Salat</p>
@@ -199,7 +197,7 @@
               </div>
             </div>
 
-            <div class="meal-container">
+            <div class="meal-container" id="mai-thai-container">
               <div class="meal-left flex">
                 <div class="meal-left-top">
                   <p class="food-title">Mai Thai Box</p>
@@ -227,7 +225,7 @@
               </div>
             </div>
 
-            <div class="meal-container">
+            <div class="meal-container" id="vine-container">
               <div class="meal-left flex">
                 <div class="meal-left-top">
                   <p class="food-title">Weinblätter (8 Stück)</p>
@@ -282,12 +280,16 @@
         </div>
       </aside>
     </main>
+
     <footer class="footer">
       <div class="footer-left">
         <p class="footer-text">© Marcel Schliwka - 2023 @ <a href="https://developerakademie.com/" target="_blank">DeveloperAkademie</a></p>
         <p><a href="https://www.flaticon.com/free-icons/basket" title="basket icons">Basket icons created by Freepik - Flaticon</a></p>
       </div>
     </footer>
+    <section class="basket-mobile">
+      <button id="basket-mobile-btn" onclick="showBasketMobile();">Warenkorb <span id="basket-mobile-btn-price"></span></button>
+    </section>
     <script src="./js/script.js"></script>
   </body>
 </html>
