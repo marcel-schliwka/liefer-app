@@ -17,6 +17,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.2);
 }
 .logo-headline {
   padding: 0%;
@@ -50,6 +51,7 @@ body {
 .main-left-content-wrapper {
   height: 100%;
   padding: 2em;
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.2);
 }
 
 .main-head-image {
@@ -64,6 +66,7 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 10px;
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.2);
 }
 
 .rating-wrapper {
@@ -100,6 +103,8 @@ body {
   padding: 1em 2em;
   margin-bottom: 1em;
   height: auto;
+  -webkit-box-shadow: 0px 0px 18px 1px #727272;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
 .meal-container:hover {
@@ -149,7 +154,6 @@ body {
 /* Basket */
 .basket-content-wrapper {
   flex-direction: column;
-  position: fixed;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -217,6 +221,7 @@ body {
 .footer {
   background-color: lightgrey;
   padding: 1em;
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.2) inset;
 }
 .footer a {
   text-decoration: none;
