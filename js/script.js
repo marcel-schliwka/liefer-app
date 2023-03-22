@@ -14,6 +14,7 @@ let orderCompletedWrapper = document.getElementById("order-completed-wrapper");
 let basketMobileBtn = document.getElementById("basket-mobile-btn");
 let mainWrapper = document.querySelector("main");
 let footer = document.querySelector("footer");
+let basketContentWrapper = document.querySelector(".basket-content-wrapper");
 
 window.addEventListener("resize", function () {
   checkScreenWidth();
@@ -142,6 +143,7 @@ function showBasketMobile() {
   mainLeft.classList.add("d-none");
   mainRight.style.display = "flex";
   mainRight.style.width = "90%";
+  basketContentWrapper.style.marginBottom = "100px";
   mainWrapper.style.justifyContent = "center";
   footer.classList.add("d-none");
 }
